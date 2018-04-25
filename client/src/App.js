@@ -43,8 +43,10 @@ class App extends Component {
 
             {!this.state.authenticated ? <Redirect to="/login" /> : null }
 
+            <Route exact path="/" component={Home} />
             <Route exact path="/other" component={Other} />
-            <Route component={Home} />
+
+            <Redirect to="/" />
           </Switch>
         </div>
       </Router>
